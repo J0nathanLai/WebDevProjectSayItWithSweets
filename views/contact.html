@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jonathan Lai">
+    <meta name="keywords" content="Carnegie Mellon University, Information Systems">
+    <meta name="description" content="Say It With Sweets Website">
+    <title>Say It With Sweets | Contact</title>
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script defer src="../static/script.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <image id="logo" src="../static/logo.png" alt="Say It With Sweets Logo" width="145px"></image>
+            </a>
+        </nav>
+        <nav id="menuBar"> <!--nav bar-->
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="b&w.html">Blue & White</a>
+            <a href="cupcakes.html">Cupcakes</a>
+            <a href="cakes.html">Cakes</a>
+            <a href="cookies.html">Cookies</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    <div class="body_content">
+        <div class ="main">
+            <h2 id ="subtitle">Contact</h2>
+            <div class="description">
+                <p>Call or email us to discuss and place your order. Go to the location below for pick up.</p>
+            </div>
+            <table>
+                <tr><td>Phone Number</td><td class="col2">+1 (814) 937 1564</td></tr>
+                <tr><td>Email</td><td class="col2">info@sayitwithsweets.com</td></tr>
+                <tr><td>Address</td><td class="col2">1307 Pleasant Valley Blvd. Altoona PA 16602 US </td></tr>
+            </table>
+        </div>
+        <div class="iconLinks">
+            <div id="follow">
+                <p>Follow Our Social Media</p>
+            </div>
+            <div class="info_logo_top">
+                <nav class="fb">
+                    <a href="https://www.facebook.com/say.it.with.sweets/" target="_blank">
+                        <image src="../static/facebook logo.png" alt="Facebook logo" width="80px"></image>
+                    </a>
+                </nav>
+                <nav class="ig">
+                    <a href="https://www.instagram.com/sayitwithsweets11/" target="_blank">
+                        <image src="../static/instagram logo.png" alt="Instagram logo" width="80px"></image>
+                    </a>
+                </nav>
+                <nav class="yelp">
+                    <a href="https://www.yelp.com/biz/say-it-with-sweets-altoona" target="_blank">
+                        <image src="../static/yelp logo.png" alt="Yelp logo" width="80px"></image>
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div id="mailingListSec">
+        <div id="mailing_form">
+            <p class="heading_2">Join Our Mailing List</p>
+            <p>Learn about upcoming promotions and product releases</p>
+            <form action="mailto:info@sayitwithsweets.com" method="post" enctype="text/plain">
+                <label for="name">Name*</label>
+                <br>
+                <input type="text" id="name" placeholder="Name (required)" required/>
+                <br>
+                <br>
+                <label for="zip">Zipcode</label>
+                <br>
+                <input type="text" id="zip" placeholder="Zipcode (optional)" pattern="[0-9]{5}"/>
+                <br>
+                <br>
+                <label for="userPhone">Mobile Phone (Optional)</label>
+                <br>
+                <input type="text" id="userPhone" placeholder="Phone No. (optional)" pattern="[0-9]{10}"/>
+                <label for="sms">Receive SMS?</label>
+                <input type="checkbox" id="sms"/>
+                <br>
+                <br>
+                <label for="email">Email*</label>
+                <input type="email" id="email" placeholder="Email (required)" required>
+                <br>
+                <br>
+                <input id="submitBTN" type="submit" value="Submit" onclick="validate()">
+            </form>
+            <p id="ValidateMsg"></p>
+        </div>
+        <image class="product" src="../static/contact.png" alt="flower sweet" width="540px" height="576px"></image>
+    </div>
+    <div id="locate">
+        <div id="mapframe">
+            <div id="map"></div>
+ 
+            <!-- prettier-ignore -->
+ 
+            <script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+ 
+                ({key: "AIzaSyBA4YOwaCeVWCR412g2I86pPOxCI308yEs", v: "weekly"});</script>
+        </div>
+        <div id="locate_info">
+            <p class="heading_2">Locate Us</p>
+            <p>Address:<br>1307 Pleasant Valley Blvd. Altoona PA 16602 US</p>
+            <p>Pick up hours:<br>M-F 10:00AM-3:00PM<br>Weekend by appointment</p>
+            <input id="howfarBTN" type="submit" value="How far are you from us?" onclick="getLocation()">
+            <p id="checkDist"></p>
+        </div>
+    </div>
+    <footer>
+        <div class="info">
+            <div class="info_left">
+                <p>Say It With Sweets</p>
+                <p>Order Only</p>
+                <p>+1 (814) 937 1564</p>
+                <p>1307 Pleasant Valley Blvd. Altoona PA 16602 US </p>
+                <p>Open Monday to Friday 10 AM to 3 PM; Weekend by appointment</p>
+            </div>
+            <div class="info_right">
+                <nav id="citations">
+                    <a href="citation.html">Citations</a>
+                </nav>
+                <p>Say It With Sweets &copy; 2024</p>
+                <div class="info_logo">
+                    <nav class="fb">
+                        <a href="https://www.facebook.com/say.it.with.sweets/" target="_blank">
+                            <image src="../static/facebook logo.png" alt="Facebook logo" width="20px"></image>
+                        </a>
+                    </nav>
+                    <nav class="ig">
+                        <a href="https://www.instagram.com/sayitwithsweets11/" target="_blank">
+                            <image src="../static/instagram logo.png" alt="Instagram logo" width="20px"></image>
+                        </a>
+                    </nav>
+                    <nav class="yelp">
+                        <a href="https://www.yelp.com/biz/say-it-with-sweets-altoona" target="_blank">
+                            <image src="../static/yelp logo.png" alt="Yelp logo" width="20px"></image>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
